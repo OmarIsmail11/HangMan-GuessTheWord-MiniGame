@@ -114,12 +114,13 @@ int main()
     cout << player1 << " please enter the word for " << player2 << " to guess: ";
     cin >> word;
     system("CLS");
-    cout << player2 << "s Turn !\n\n";
     while (!isValid(word))
     {
         cout << "Invalid Word ! Player 1 please re-enter the word for player 2 to guess: ";
         cin >> word;
+        system("CLS");
     }
+    cout << player2 << "s Turn !\n\n";
     unordered_set<char> letters {word.begin(), word.end()};
     string progress (word.size(), '_');
     unordered_set<char> lettersUsed;
